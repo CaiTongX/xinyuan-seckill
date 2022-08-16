@@ -1,5 +1,7 @@
 package com.cxy.seckill.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +14,6 @@ import com.cxy.seckill.vo.LoginVo;
 import com.cxy.seckill.vo.RespBean;
 
 import lombok.extern.slf4j.Slf4j;
-
-
-
-
 
 /**
  * 
@@ -33,7 +31,7 @@ public class LoginController {
 	 * 跳转到登录界面的方法
 	 */
 	
-	@RequestMapping("toLogin")
+	@RequestMapping("/toLogin")
 	public String toLogin() {
 		return "login";//跳转页面
 	}
@@ -42,8 +40,8 @@ public class LoginController {
 	 */
 	@RequestMapping("/doLogin")
 	@ResponseBody
-	public RespBean doLogin(@Valid LoginVo loginVo) {//注解用来校验
-		
-		return userService.doLogin(loginVo);
+	public RespBean doLogin(@Valid LoginVo loginVo,HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse) {//注解用来校验
+		log.info("{}", loginVo);
+		return userService.doLogin(loginVo,httpServletRequest,httpServletResponse);
 	}
 }

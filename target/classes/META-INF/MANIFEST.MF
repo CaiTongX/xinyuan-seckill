@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: seckill-system
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: 53429
+Implementation-Vendor-Id: com.cxy
+Build-Jdk: 1.8.0_161
+Implementation-URL: https://spring.io/projects/spring-boot/seckill-sys
+ tem
+Created-By: Maven Integration for Eclipse
+
