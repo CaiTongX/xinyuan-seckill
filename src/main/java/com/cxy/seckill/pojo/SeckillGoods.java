@@ -25,9 +25,9 @@ public class SeckillGoods implements Serializable {
 
     private String goodsId;
 
-    private String seckillPrice;
+    private Integer seckillPrice;
 
-    private String stockCount;
+    private int stockCount;
 
     private Date startDate;
 

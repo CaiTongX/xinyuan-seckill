@@ -31,9 +31,9 @@ public class Order implements Serializable {
 
     private String goodsName;
 
-    private String goodsCount;
+    private int goodsCount;
 
-    private String goodsPrice;
+    private Integer goodsPrice;
 
     private String orderChannel;
 

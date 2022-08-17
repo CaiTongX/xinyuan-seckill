@@ -1,5 +1,7 @@
 package com.cxy.seckill.vo;
 
+import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 import com.cxy.seckill.pojo.Goods;
@@ -9,7 +11,7 @@ import com.cxy.seckill.pojo.Goods;
  * @author 53429
  *商品返回对象
  */
-public class GoodsVo extends Goods{
+public class GoodsVo extends Goods {
 	
 
 	/**
@@ -24,27 +26,27 @@ public class GoodsVo extends Goods{
 	/**
 	 * 
 	 */
-	private String seckillPrice;
+	private BigDecimal seckillPrice;//在这里使用此类型防止数据丢失
 
-    private String stockCount;
+    private int stockCount;
 
     private Date startDate;
 
     private Date endDate;
 
-	public String getSeckillPrice() {
+	public BigDecimal getSeckillPrice() {
 		return seckillPrice;
 	}
 
-	public void setSeckillPrice(String seckillPrice) {
+	public void setSeckillPrice(BigDecimal seckillPrice) {
 		this.seckillPrice = seckillPrice;
 	}
 
-	public String getStockCount() {
+	public int getStockCount() {
 		return stockCount;
 	}
 
-	public void setStockCount(String stockCount) {
+	public void setStockCount(int stockCount) {
 		this.stockCount = stockCount;
 	}
 
@@ -64,7 +66,7 @@ public class GoodsVo extends Goods{
 		this.endDate = endDate;
 	}
 
-	public GoodsVo(String seckillPrice, String stockCount, Date startDate, Date endDate) {
+	public GoodsVo(BigDecimal seckillPrice, int stockCount, Date startDate, Date endDate) {
 		super();
 		this.seckillPrice = seckillPrice;
 		this.stockCount = stockCount;

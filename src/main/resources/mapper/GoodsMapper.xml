@@ -16,7 +16,8 @@
 
 	<!-- 通用查询结果列 -->
 	<sql id="Base_Column_List">
-		id, goods_name, goods_title, goods_img, goods_detail, goods_price,
+		id, goods_name, goods_title, goods_img, goods_detail,
+		goods_price,
 		goods_stock
 	</sql>
 	<!-- 获取商品 -->
@@ -34,13 +35,15 @@
 		sg.start_date,
 		sg.end_date
 		from
-		t_goods g,
+		t_goods
+		g,
 		t_seckill_goods sg
 		where
 		g.id=sg.goods_id
 	</select>
 	<!-- 获取商品详情 -->
-	<select id="findGoodsVoByGoodsId" resultType="com.cxy.seckill.vo.GoodsVo">
+	<select id="findGoodsVoByGoodsId"
+		resultType="com.cxy.seckill.vo.GoodsVo">
 		select
 		g.id,
 		g.goods_name,
@@ -55,7 +58,8 @@
 		sg.end_date
 		from
 		t_goods g,
-		t_seckill_goods sg
+		t_seckill_goods
+		sg
 		where
 		g.id=sg.goods_id
 		and

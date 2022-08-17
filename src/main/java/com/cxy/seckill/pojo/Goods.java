@@ -2,6 +2,8 @@ package com.cxy.seckill.pojo;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
+import java.math.BigDecimal;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -30,9 +32,9 @@ public class Goods implements Serializable {
 
     private String goodsDetail;
 
-    private String goodsPrice;
+    private BigDecimal goodsPrice;//在这里使用此类型防止数据丢失
 
-    private String goodsStock;
+    private int goodsStock;
 
 
 }
