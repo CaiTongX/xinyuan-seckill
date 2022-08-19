@@ -32,6 +32,7 @@ public class SeckillController {
 
 	/*
 	 * 秒杀功能
+	 * 优化前QPS194 商品超卖
 	 */
 	@RequestMapping("/doSeckill")
 	public String doSeckill(Model model, User user, String goodsId) {

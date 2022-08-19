@@ -27,6 +27,7 @@ public class GoodsController {
 	private IGoodsService iGoodsService;
 
 	/*
+	 * window优化前qps200左右非常可怜
 	 * 跳转到商品列表页面
 	 */
 	// HttpSession用来获取用户信息

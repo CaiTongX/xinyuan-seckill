@@ -69,7 +69,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 		//之前把用户信息放到session里面 但想要的做法是直接存入redis内
 		//httpServletRequest.getSession().setAttribute(ticket, user);//key是cookie value是user对象
 		CookieUtil.setCookie(httpServletRequest, httpServletResponse, "userTicket",ticket);
-		return RespBean.success();
+		return RespBean.success(ticket);
 	}
 	
 	/*
